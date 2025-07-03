@@ -65,3 +65,4 @@ output AZURE_CONTAINER_APPS_ENVIRONMENT_DEFAULT_DOMAIN string = resources.output
 output FUNCSTORAGEA17CA_BLOBENDPOINT string = funcstoragea17ca.outputs.blobEndpoint
 output FUNCSTORAGEA17CA_QUEUEENDPOINT string = funcstoragea17ca.outputs.queueEndpoint
 output URL_DATA_TABLEENDPOINT string = url_data.outputs.tableEndpoint
+output FUNCSTORAGEA17CA_TABLEENDPOINT string = funcstoragea17ca.outputs.tableEndpoint
