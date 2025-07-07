@@ -113,6 +113,26 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Create Url with Expiration (All Schedule Fields)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{"key": "Accept", "value": "application/json"},
+					{"key": "Content-Type", "value": "application/json"}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Vanity\": \"expiring-url\",\n  \"Url\": \"https://www.example.com\",\n  \"Title\": \"Lien temporaire\",\n  \"Schedules\": [\n    {\n      \"Start\": \"2024-06-01T00:00:00Z\",\n      \"End\": \"2024-06-30T23:59:59Z\",\n      \"AlternativeUrl\": \"https://www.example.com/expired\",\n      \"Cron\": \"0 8 * * *\",\n      \"DurationMinutes\": 120\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/UrlCreate",
+					"host": ["{{BaseUrl}}"],
+					"path": ["api", "UrlCreate"]
+				}
+			},
+			"response": []
 		}
 	]
 }
